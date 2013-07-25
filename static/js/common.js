@@ -22,9 +22,9 @@ $(function() {
   // });
 
   //qrcode
-  $('.qrcode .btn').on('click', function() {
+  $('.qrcode').on('click', function() {
     var $this = $(this), isActive = $this.hasClass('active');
-    $this.parent().animate({'top': !isActive ? '4px' : '-180px'}, {
+    $this.animate({'top': !isActive ? '4px' : '-180px'}, {
       duration: isActive ? 200 : 800,
       easing: isActive ? 'easeInQuad' : 'easeOutBounce',
       complete: function() {

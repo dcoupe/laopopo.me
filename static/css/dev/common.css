@@ -22,6 +22,7 @@
 	width: 180px;
 	/*top: 4px;*/
 	top: -180px;
+	cursor: pointer;
 }
 #hd .qrcode img{
 	width: 180px;
@@ -32,7 +33,6 @@
 	width: 50px;
 	height: 77px;
 	background-image: url(/static/img/qrcode_pull.gif);
-	cursor: pointer;
 	margin: 0 auto;
 }
 

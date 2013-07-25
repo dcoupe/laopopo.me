@@ -19,9 +19,6 @@ a,a:link,a:visited,a:hover{
 	color: #f33;
 	text-decoration: none;
 }
-a:hover{
-	text-decoration: underline;
-}
 body{
 	font-family: Tahoma,sans-serif;
 }
