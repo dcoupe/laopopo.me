@@ -33,6 +33,11 @@ $(function() {
     });
   });
 
+  //搜索验证
+  $('#search .submit').on('click', function() {
+    if (!$(this).parent().find('input[name=key]').val()) return false;
+  })
+
   //储存二维码状态
     
 

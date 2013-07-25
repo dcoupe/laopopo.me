@@ -2,13 +2,20 @@
 @media only screen and (max-width:600px){
 	#hd{
 		height: auto;
-		margin-bottom: 0;
+		margin-bottom: 18px;
 	}
 	#hd .qrcode{
 		display: none;
 	}
 	#bd .main{
 		width: 94%;
+	}
+	.content p{
+		text-indent: 0;
+	}
+	.content img{
+		margin-left: 0;
+		padding: 0;
 	}
 	#search{
 		width: 94%;
