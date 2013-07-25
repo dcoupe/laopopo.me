@@ -1,6 +1,3 @@
-body{
-	min-height: 100%;
-}
 /* head */
 #title{
 	height: 4px;
@@ -12,32 +9,33 @@ body{
 #hd{
 	margin-bottom: 40px;
 	overflow: hidden;
-	background: #fff;
 }
 #hd h1{
 	height: 4px;
 	background: url(/static/img/color.png) repeat;
+	position: relative;
+	z-index: 8;
 }
 #hd .qrcode{
-	width: 40px;
-	height: 40px;
 	position: absolute;
-	left: 280px;
-	bottom: 0;
-	padding: 0;
-	background-image: url(../img/qrcode_pre_view_40.jpg);
+	right: 1em;
+	width: 180px;
+	/*top: 4px;*/
+	top: -180px;
 }
-#hd .list{
-	background-image: url(../img/list.png);
-	height: 80px;
-	width: 80px;
-	padding: 0;
-	float: right;
+#hd .qrcode img{
+	width: 180px;
+	display: block;
+}
+#hd .qrcode .btn{
+	display: block;
+	width: 50px;
+	height: 77px;
+	background-image: url(/static/img/qrcode_pull.gif);
+	cursor: pointer;
+	margin: 0 auto;
 }
 
-#bd{
-	background: #fff;
-}
 #bd .main{	
 	width: 600px;
 	margin: 0 auto;
