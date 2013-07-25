@@ -1,0 +1,32 @@
+/* reset */
+body,h1,h2,h3,h4,h5,h6,img,a,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea{
+	margin: 0;
+	padding: 0;
+}
+i,b,em{
+	font-style: normal;
+	font-weight: normal;
+}
+li{
+	list-style: none;
+}
+img{
+	border:none;
+	margin: 0;
+	padding: 0;
+}
+a,a:link,a:visited,a:hover{
+	color: #f33;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+body{
+	font-family: Tahoma,sans-serif;
+}
+
+::selection{
+	color: #fff;
+	background-color: #693
+}

@@ -1,0 +1,61 @@
+/*reponsive*/
+@media only screen and (max-width:800px){
+	body{padding:0;}
+	#right_con{
+		position: static;
+		height: auto;
+		width: auto;
+		display: none;
+	}
+	#face{
+		width: 100%;
+	}
+	#left_con{
+		width: 94%;
+	}
+	#ft{
+		padding: 0;
+	}
+	#ft p{
+		width: 94%;
+		text-align: center;
+	}
+}
+@media only screen and (max-width:640px){
+	#header{
+		height: auto;
+		margin-bottom: 0;
+	}
+	#header .qrcode{
+		display: none;
+	}
+	#nav{
+		float: none;
+		height: auto;
+		max-height: 140px;
+
+	}
+	#nav a{
+		display: none;
+		height: auto;
+		line-height: normal;
+	}
+	#nav .face{
+		display: block;
+		width: 100%;
+	}
+	#header .list{
+		display: block;
+		margin-top: -80px;
+	}
+	#page, #detail_home{
+		margin: 1em 0;
+	}
+	#ft{
+		background: #693;
+		height: 140px;
+	}
+	#ft .motto{
+		font-size: 1.4em;
+	}
+}
