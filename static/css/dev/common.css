@@ -62,9 +62,12 @@ body{
 h1,em{
 	display: block;
 	font-weight: 600;
-	color: #693;
-	line-height: 2em;
+	color: #f33;
+	line-height: 1.8em;
 	font-size: 1.2em;
+}
+h1{
+	text-align: center;
 }
 em span{
 	display: inline-block;
@@ -88,9 +91,10 @@ em span{
 }
 .content{
 	padding-bottom: 1em;
+	text-align: justify;
 }
 .content p{
-	line-height: 2em;
+	line-height: 1.6;
 	text-indent: 2em;
 	padding: .5em 0;
 }
@@ -123,7 +127,7 @@ em span{
 
 
 #search{
-	margin: 20px auto;
+	margin: 30px auto;
 	width: 400px;
 	opacity: .6;
 }
@@ -218,6 +222,17 @@ em span{
 	margin: 0 auto;
 	margin-top: -80px;
 }
+#ft .me:hover,
+#ft .me:active{
+	/*-webkit-animation: me .5s ease-in-out;
+
+	-webkit-transform: scale(1.2,1.2);*/
+}
+
+@-webkit-keyframes me{
+	0%{-webkit-transform: scale(1,1);}
+	100%{-webkit-transform: scale(1.2,1.2);}
+}
 
 #loading{
 	display: block;
@@ -251,14 +266,18 @@ em span{
 
 .sns_share{
 	height: 26px;
-	border-top: #693 solid 2px;
+	border-top: #f33 solid 2px;
+	opacity: .6;
+}
+.sns_share:hover{
+	opacity: 1;
 }
 .sns_share a{
 	float: right;
 	text-indent: -9999em;
 	width: 26px;
 	height: 26px;
-	background-color: #693;
+	background-color: #f33;
 	background-position: center;
 	background-repeat: no-repeat;
 }
