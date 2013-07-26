@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="Keywords" content="老婆婆me,老婆婆,老婆婆的远大梦想,laopopo.me" /> 
+<meta name="Description" content="老婆婆的远大梦想" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<title>老婆婆的远大梦想</title>
+<link href="//laopopo.me/static/img/apple-icon.png" rel="apple-touch-icon-precomposed" />
+<link rel="icon" href="//laopopo.me/static/img/favicon.png" type="image/x-icon"/>
+<script type="text/javascript">
+	function load(src) {
+		var s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.src = src;
+		document.getElementsByTagName('head')[0].appendChild(s);
+	}
+	load('//laopopo.me/static/js/min.common.js');
+	load('http://tajs.qq.com/stats?sId=20121512');
+</script>
+<link rel="stylesheet" href="//laopopo.me/static/css/min.common.css"/>
+</head>
+<header id="hd">
+	<h1>老婆婆的远大梦想</h1>
+	<p class="qrcode"><img src="/static/img/qrcode_for_laopopo.jpg" /><a class="btn"></a></p>
+</header>
+<div id="bd" class="wrap">
+	<div class="main" id="wrapper">
+<style type="text/css">
+	body{background: #eee url(/static/img/bg.png);}
+	#bd .main{width: auto;padding: 10px 2%;}
+	#add-form{padding:2em;}
+	#add_title,#add_img,#submit,#content{display:block;margin-bottom:1.2em;padding:10px;outline:none;}
+	#add_title,#content,#submit{width:100%;font-size: 1em;border: none;box-shadow: 1px 1px 1px rgba(0,0,0,.2);border-radius:3px;}
+	#add-form label{margin-right:1em;}
+	#content{height:1000px;overflow-y:auto;background-color: #fdfeff;}
+	#submit{display:block;width:5em;margin-top:1em;float:right;cursor:pointer;-webkit-appearance: none;background-color: #f33;color: #fff;}
+	#add_control{padding: 1em 0;width:96%;}
+	#add_control a{padding: 0 .5em;}
+	@media only screen and (max-width:600px){
+		#bd .main{padding: 10px 0%;}
+		#add-form{padding:1em;}
+	}
+</style>
+<form id="add-form" method="post" enctype="multipart/form-data" action="http://laopopo.me/index.php/add/one">
+	<input id="add_title" name="title" type="text" value=""/>
+	<!-- <div id="add_control">
+		<a id="insert_pic" href="javascript:void(0);">插入图片</a>
+		<a id="insert_code" href="javascript:void(0);">插入代码</a>
+		<a id="insert_link" href="javascript:void(0);">插入链接</a>
+		<a id="trans_code" href="javascript:void(0);">代码转码</a>
+	</div> -->
+	<textarea id="content" name="content"></textarea>
+	<label><input type="radio" name="tag" value="心情日记" checked="checked"/>日记</label>
+	<label><input type="radio" name="tag" value="社会百态" />社会</label>
+	<label><input type="radio" name="tag" value="行业分析" />行业</label>
+	<label><input type="radio" name="tag" value="画" />画</label>
+	<label><input type="radio" name="tag" value="唱" />唱</label>
+	<label><input type="radio" name="tag" id="add_fe" value="前端笔记" />前端</label>
+	<!-- <input id="add_img" name="image" type="file" value=""/> -->
+	<input id="submit" type="submit" value="发布" />
+</form>
+<script type="text/javascript">
+
+	var elContent = document.getElementById('content');
+
+	document.getElementById('insert_pic').onclick = function(){
+		elContent.value = elContent.value + '<img src="/blog/images/图片名称和后缀" />';
+	}
+
+	document.getElementById('insert_code').onclick = function(){
+		elContent.value = elContent.value + '<pre class="prettyprint">\n代码\n</pre>';
+	}
+
+	document.getElementById('insert_link').onclick = function(){
+		elContent.value = elContent.value + '<a href="在此输入链接" target="_blank">文字</a>';
+	}
+
+	document.getElementById('trans_code').onclick = function(){
+		elContent.value = transCode(elContent.value);
+	}
+
+	document.getElementById('add_fe').onclick = function(){
+		alert('记得代码转码哦！');
+	}
+
+	function transCode(s) {
+
+		var _arr = s.split('<pre class="prettyprint">');
+			codeNum = _arr.length,
+			_s = '';
+
+		for(var i=0; i<codeNum;i++) {
+
+			if(0 != i) {
+				_arr[i] = '<pre class="prettyprint">'+_arr[i];
+			}			
+
+			var arr = /^(<pre class="prettyprint">)([\s\S]*)(<\/pre>)([\s\S]*)?/.exec(_arr[i]);
+
+			if(arr) {
+				arr[2] = arr[2].replace(/</g,'&lt');
+				arr[2] = arr[2].replace(/>/g,'&gt');
+
+				arr.shift();
+				_s += arr.join('');
+			} else {
+				_s += _arr[i];
+			}
+
+		}
+
+		return _s;
+		
+		/*s = s.replace(/</g,'&lt');
+		s = s.replace(/>/g,'&gt');
+
+		s = s.replace(/&ltpre class="prettyprint"&gt/g,'<pre class="prettyprint">');
+		s = s.replace(/&lt\/pre&gt/g,'</pre>');
+
+		return s;*/
+	}
+
+</script>  </div>
+</div>
+<footer id="ft">
+	<a href="/" class="me yui3-pjax"></a>
+  	<p class="motto">我是错的，你也不一定是对的。</p>
+	<form id="search" action="/index.php/s">
+		<div class="text"><input name="key" type="text" value=""></div>
+		<div class="submit"><input type="submit" value="Search"></div>
+	</form>
+	<div id="nav">
+		<a href="http://laopopo.github.io" title="前端华尔兹" target="_blank">Github</a>
+		<a href="http://imapm.lofter.com" title="我是一个产品人" target="_blank">Lofter</a>
+	</div>
+</footer>
+<span id="loading">加载中...</span>
