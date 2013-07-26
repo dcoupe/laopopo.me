@@ -72,10 +72,11 @@ h1{
 #bd .main{
 	position: relative;
 }
-#bd .main em span{
+#bd .main em b{
 	font-size: .7em;
 	color: #bbb;
 	line-height: 2.3;
+	font-weight: 500;
 }
 #bd .main em a{
 	color: #111;
@@ -131,6 +132,7 @@ h1{
 	margin: 30px auto;
 	width: 400px;
 	opacity: .6;
+	overflow: hidden;
 }
 #search:after{
 	content: "";
@@ -189,6 +191,7 @@ h1{
 	position: absolute;
 	top: 0;
 	right: 0;
+	opacity: .6;
 }
 #timeline a{
 	display: block;
