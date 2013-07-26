@@ -69,6 +69,9 @@ h1,em{
 h1{
 	text-align: center;
 }
+#bd .main{
+	position: relative;
+}
 #bd .main em span{
 	font-size: .7em;
 	color: #bbb;
@@ -181,6 +184,28 @@ h1{
 	text-decoration: none;
 }
 
+/* timeline */
+#timeline{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#timeline a{
+	display: block;
+	color: #666;
+	border-left: 3px #fff solid;
+	margin: .5em 0;
+	line-height: 1;
+	padding-left: .4em;
+}
+#timeline a:hover{
+	color: #f33;
+}
+#timeline .c{
+	color: #f33;
+	border-color: #f33;
+}
+
 
 /* foot */
 #ft{
@@ -237,7 +262,7 @@ h1{
 	position: fixed;
 	top: 300px;
 	left: 50%;
-	background-color: #693;
+	background-color: #f33;
 	opacity: .6;
 	color: #fff;
 	padding: .5em 1em;
