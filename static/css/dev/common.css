@@ -14,19 +14,22 @@
 	height: 4px;
 	background: url(/static/img/color.png) repeat;
 	position: relative;
-	z-index: 8;
+	z-index: 888;
 }
 #hd .qrcode{
 	position: absolute;
 	right: 1em;
 	width: 180px;
 	/*top: 4px;*/
-	top: -180px;
+	top: -182px;
 	cursor: pointer;
 }
 #hd .qrcode img{
 	width: 180px;
 	display: block;
+	background-color: #fff;
+	position: relative;
+	z-index: 8;
 }
 #hd .qrcode .btn{
 	display: block;
@@ -34,8 +37,28 @@
 	height: 77px;
 	background-image: url(/static/img/qrcode_pull.gif);
 	margin: 0 auto;
+	background-color: #fff;
+	-webkit-transform: translate(0, -6px);
+	-moz-transform: translate(0, -6px);
+	-ms-transform: translate(0, -6px);
+	-o-transform: translate(0, -6px);
+	transform: translate(0, -6px);
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
 }
-
+#hd .qrcode .btn:hover{
+	-webkit-transform: translate(0, -2px);
+	-moz-transform: translate(0, -2px);
+	-ms-transform: translate(0, -2px);
+	-o-transform: translate(0, -2px);
+	transform: translate(0, -2px);
+}
+#hd .qrcode.down .btn{
+	-webkit-transform: translate(0, -2px);
+}
 #bd .main{	
 	width: 600px;
 	margin: 0 auto;
@@ -105,6 +128,39 @@ h1{
 	margin-left: -2em;
 	width: 100%;
 }
+.content blockquote {
+	border-left: 4px solid #DDD;
+	padding: 0 15px;
+	color: #777;
+	font-size: .95em;
+}
+.content pre {
+	border: 1px solid #ddd;
+	background-color: #f8f8f8;
+	border-radius: 3px;
+	padding: .4em .6em;
+	font-size: 1em;
+	line-height: 2em;
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6{
+	padding: .6em 0;
+}
+.content code {
+	border: 1px solid #ddd;
+	background-color: #f8f8f8;
+	font-size: 85%;
+	border-radius: 3px;
+	padding: .2em .4em;
+}
+.content pre code {
+	border: 0;
+	padding: .2em 0;
+}
 #page{
 	text-align: center;
 	font-size: 2em;
@@ -115,6 +171,10 @@ h1{
 	display: inline-block;
 	padding: .4em;
 	-webkit-transform: scaleY(1.8);
+	-moz-transform: scaleY(1.8);
+	-o-transform: scaleY(1.8);
+	-ms-transform: scaleY(1.8);
+	transform: scaleY(1.8);
 	font-size: .6em;
 	vertical-align: middle;
 	position: relative;
@@ -189,7 +249,7 @@ h1{
 /* timeline */
 #timeline{
 	position: absolute;
-	top: 0;
+	top: 2em;
 	right: 0;
 	opacity: .6;
 }
@@ -241,23 +301,25 @@ h1{
 	display: block;
 	width: 100px;
 	height: 100px;
-	background: #f33 url(/static/img/me.png) no-repeat;
+	background: #fff url(/static/img/me.png) no-repeat;
 	background-size: cover;
 	border-radius: 50%;
 	border: 8px #fff solid;
 	margin: 0 auto;
 	margin-top: -80px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 #ft .me:hover,
 #ft .me:active{
-	/*-webkit-animation: me .5s ease-in-out;
-
-	-webkit-transform: scale(1.2,1.2);*/
-}
-
-@-webkit-keyframes me{
-	0%{-webkit-transform: scale(1,1);}
-	100%{-webkit-transform: scale(1.2,1.2);}
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 #loading{
